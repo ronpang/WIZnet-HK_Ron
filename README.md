@@ -23,7 +23,7 @@ The followings codes is using WIZnet's sample codes to create a step by step cod
 2. [TCP with DHT11 Sensor and light controls][link-DHT11 led] - TCP communication to monitor records from Adding DHT11 and controls a Red LED light blub
 3. [Soil moisture sensor module][link-soil moisture] - Codings for Soil moisture sensor's range setting and collect moisture
 4. [TCP with Soil moisture, DHT sensor and light control][link-DHT11 led soil moisture] -Combined everything and use WIZnet's Ehternet HAT for TCP communication
-5. [Adafruit_io Part 1][link-adafruitio1] - Contain DHT 11, Light controls and Soil Moisture sensor data upload and download (For more information about Adafruit io, please refer [WIZnet's Ethernet HAT Adafruit IO example][link-adafruit_io_wiznet])([WIZnet's Adafruit IO codes][link-adafruit_io_wiznet_example])
+5. [Adafruit_io Part 1][link-adafruitio1] - Contain DHT 11, Light controls and Soil Moisture sensor data upload and download (Based on [WIZnet's Ethernet HAT Adafruit IO][link-adafruit_io_wiznet])([WIZnet's Adafruit IO codes][link-adafruit_io_wiznet_example])
 
 
 
