@@ -30,7 +30,7 @@ The followings codes is using WIZnet's sample codes to create a step by step cod
 
 [link-getting_started]: https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/Ethernet%20Example%20Getting%20Started%20%5BCircuitpython%5D.md
 [link-all examples]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples
-[link-tcp communication]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP%20server.py
+[link-tcp communication]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server.py
 [link-DHT11 led]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(DHT11%2C%20led).py
 [link-soil moisture]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Soil%20Sensor/Soil%20sensor%20settings.py
 [link-DHT11 led soil moisture]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(DHT11%2C%20led%2C%20soil%20sensor).py
