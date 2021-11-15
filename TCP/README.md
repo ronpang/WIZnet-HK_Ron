@@ -1,6 +1,4 @@
-# W5100S PICO circuit connection
-
-1) DHT11 Sensor + RED LED light
+# 1) DHT11 Sensor + RED LED light
 
 ![][link-DHT11 led image]
 
