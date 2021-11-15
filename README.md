@@ -27,7 +27,7 @@ The followings codes is using WIZnet's sample codes to create a step by step cod
 
 
 
-[link-Ethernet hat image]
+
 [link-getting_started]: https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/Ethernet%20Example%20Getting%20Started%20%5BCircuitpython%5D.md
 [link-all examples]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples
 [link-tcp communication]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP%20server.py
