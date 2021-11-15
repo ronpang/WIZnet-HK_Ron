@@ -19,7 +19,7 @@ For more information, please refer to the links below.
 # 🔴Application
 The followings codes is using WIZnet's sample codes to create a step by step codings for developing different kind of applications
 
-1. [TCP communication] - Echo TCP server example with Status register controls from WIZnet's chip. (based on WIZnet's [TCP Echo][link-tcp echo] example)
+1. [TCP communication][link-tcp communication] - Echo TCP server example with Status register controls from WIZnet's chip. (based on WIZnet's [TCP Echo][link-tcp echo] example)
 2. [TCP with DHT11 Sensor and light controls] - TCP communication to monitor records from Adding DHT11 and controls a Red LED light blub
 3. [Soil moisture sensor module] - Codings for Soil moisture sensor's range setting and collect moisture
 4. [TCP with Soil moisture, DHT sensor and light control] -Combined everything and use WIZnet's Ehternet HAT for TCP communication
@@ -28,7 +28,7 @@ The followings codes is using WIZnet's sample codes to create a step by step cod
 
 
 
-
+[link-tcp communication]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP%20server.py
 [link-all examples]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples
 [link-tcp echo]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Network/W5x00_Echo_Demo_TCP.py
 [link-adafruit_io_wiznet_example]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples/Adafruit_IO
