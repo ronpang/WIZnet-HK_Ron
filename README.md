@@ -24,7 +24,7 @@ The followings codes is using WIZnet's sample codes to create a step by step cod
 3. [Soil moisture sensor module][link-soil moisture] - Codings for Soil moisture sensor's range setting and collect moisture
 4. [TCP with Soil moisture, DHT sensor and light control][link-DHT11 led soil moisture] -Combined everything and use WIZnet's Ehternet HAT for TCP communication
 5. [Adafruit_io Part 1][link-adafruitio1] - Contain DHT 11, Light controls and Soil Moisture sensor data upload and download (Based on [WIZnet's Ethernet HAT Adafruit IO][link-adafruit_io_wiznet] & [WIZnet's Adafruit IO codes][link-adafruit_io_wiznet_example])
-
+6. [TCP light control][link-TCP light control] - Contain a light sensor, using command to control on/off and color change
 
 
 
@@ -38,3 +38,4 @@ The followings codes is using WIZnet's sample codes to create a step by step cod
 [link-tcp echo]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Network/W5x00_Echo_Demo_TCP.py
 [link-adafruit_io_wiznet_example]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples/Adafruit_IO
 [link-adafruit_io_wiznet]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Adafruit_IO/Getting%20Start%20Adafruit%20IO.md
+[link-TCP light control]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(Neopixel%20light%20control).py
