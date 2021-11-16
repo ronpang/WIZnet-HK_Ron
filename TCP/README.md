@@ -24,7 +24,10 @@ It is based on the above TCP server code.
 - DHT11 and LED light control 
 - Added Soil moisture sensor ([Soil moisture sensor coding][link-soil moisture readme])
 
+# Neopixel light control with light sensor
 
+- Light sensor controls the brightness of the pixel light
+- Commands to control on/off and color 
 
 
 
