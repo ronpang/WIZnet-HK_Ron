@@ -15,8 +15,8 @@ from adafruit_io.adafruit_io import IO_MQTT
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
 
 secrets = {
-    'aio_username' : 'ronpang',   ### Wirte Username here ###
-    'aio_key' : 'aio_xBrM14RGowbXn3gyAxxd5MUSGR3n'  ### Write Active Key here ###
+    'aio_username' : '**********',   ### Wirte Username here ###
+    'aio_key' : '*********'  ### Write Active Key here ###
     }
 
 # Set your Adafruit IO Username and Key in secrets.py
