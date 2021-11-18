@@ -3,7 +3,7 @@ Adafruit IO provides a lot of opportunity for devleoping a smart interface with 
 
 By having WIZnet Ethernet HAT, we could directly to create or modify your codes to work in Adafruit IO. ([Adafruit IO Introduction][link-adafruit_io_wiznet] , [Adafruit IO example][link-adafruit_io_wiznet_example])
 
-## Adding simple sensors
+## Part 1: Adding simple sensors
 It is based on [Adafruit IO example][link-adafruit_io_wiznet_example] & [TCP server Sensor example][link- TCP server sensor/control]
 
 Added:
@@ -15,7 +15,7 @@ IO features:
 1. Gauge for Temperature, Humiditiy and Soil Humidity Sensor
 2. LED light on/off control
 
-## NeoPixel light control
+## Part 2: NeoPixel light control
 It is based on [Adafruit IO example][link-adafruit_io_wiznet_example] & [TCP NeoPixel light example][link- TCP Neopixel]
 
 Added:
