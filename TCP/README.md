@@ -42,5 +42,5 @@ Added:
 
 
 
-[link-connection diagram]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/github-%20connection%20diagram.PNG
+[link-connection diagram]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/github-%20connection%20diagram%202.PNG
 [link-soil moisture readme]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Soil%20Sensor/README.md
