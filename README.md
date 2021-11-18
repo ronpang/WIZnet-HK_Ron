@@ -1,7 +1,11 @@
 # WIZnet WIZnet Ethernet Hat with Raspberry PI PICO 
-[Introduction](#introduction) 
+1. [Introduction](#introduction) 
 
-[Application](#TCP application)
+2. [TCP Application](#TCPapplication)
+
+3. [Adafruit IO Upgrade](#AdafruitIO)
+
+4. [Others](#Others)
 
 <a name="introduction"></a>
 
@@ -14,7 +18,7 @@ For more information, please refer to the links below.
 
 [WIZnet's Example codings][link-all examples]
 
-<a name=" TCP application"></a>
+<a name="TCPapplication"></a>
 
 # 💻 TCP Application
 WIZnet's TCP's sample codes to create a step by step codings for developing different kind of applications 
@@ -24,12 +28,15 @@ WIZnet's TCP's sample codes to create a step by step codings for developing diff
 3. [TCP with Soil moisture, DHT sensor and light control][link-DHT11 led soil moisture] -Combined everything and use WIZnet's Ehternet HAT for TCP communication
 4. [TCP Pixel light control][link-TCP light control] - Contain a light sensor, using command to control on/off and color change (Based on WIZnet's [Neopixel][link-wiznet neopiexl] example)
 
+<a name="AdafruitIO"></a>
+
 # 🗺️ Adafruit IO Upgrade
 WIZnet's Adafruiit IO samples codes with related application (Ref: [WIZnet's Ethernet HAT Adafruit IO][link-adafruit_io_wiznet] & [WIZnet's Adafruit IO][link-adafruit_io_wiznet_example] example)
 
 1. [Adafruit IO Part 1][link-adafruitio1] - Contain DHT 11, Light controls and Soil Moisture sensor data upload and download 
 2. [Adafruit IO Part 2][link-adafruitio2] - Contain Light Sensor module to determine brightness and a Pixel Led light 
 
+<a name="Others"></a>
 # 📓 Others
 1. [Soil moisture sensor module][link-soil moisture] - Codings for Soil moisture sensor's range setting and collect moisture
 
