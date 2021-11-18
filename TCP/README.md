@@ -1,33 +1,44 @@
-# Connection diagram 
+## Connection diagram ##
 
 ![][link-connection diagram]
 
-# TCP server
+## TCP server ##
 
-This sample code is based on TCP server Echo provided by WIZnet. 
+This sample code is based on TCP server Echo provided by WIZnet  
+- TCP server rather than using client is allowing user doesn't need to change their code frequently. 
 
-The purpose for using TCP server rather than using client is allowing user doesn't need to change their code frequently. 
+Device:
+1. Raspberry PI PICO - The mainboard converted to circuit python and bundle with adafruit's and WIZnet's library
+2. WIZnet Ethernet HAT - Provides the Ethernet feature 
 
-The purpose for making this code is letting more people to understand more about WIZnet's solution.
+Modified: 
 
-This method added status register checking to handle different kind of communication stage  
+* Status register checking to handle different kind of communication stage  
 
-# DHT11 and LED control
+## DHT11 and LED control ##
 
 It is based on the above TCP server code.
 
-- DHT11 temperature and humidity sensor 
-- LED light control 
+Added:
+1. DHT11 temperature and humidity sensor
+2. LED light control 
 
-# DHT11, LED control and Soil moisture sensor
+## DHT11, LED control and Soil moisture sensor ##
 
-- DHT11 and LED light control 
-- Added Soil moisture sensor ([Soil moisture sensor coding][link-soil moisture readme])
+Added:
 
-# Neopixel light control with light sensor
+1. DHT11 and LED light control 
+2. Added Soil moisture sensor 
+    1. Converting adc values to percentage values(%) ([Soil moisture sensor coding][link-soil moisture readme])
+    2. Find the mositure range of the sensor 
 
-- Light sensor controls the brightness of the pixel light
-- Commands to control on/off and color 
+## Neopixel light control with light sensor ##
+
+1. Light sensor module
+     1. Converting adc values to  percentage values (%), based on this value to change the brightness of the Pixel LED
+2. Commands to control on/off and color
+     1. Determine the command (on/off) and do related response
+     2. Inputting RBG values in interger form (xxx,xxx,xxx) to change the color of the Pixel leds 
 
 
 
