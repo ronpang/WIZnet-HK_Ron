@@ -34,6 +34,8 @@ Added:
 
 ## Neopixel light control with light sensor ##
 
+Added:
+
 1. Light sensor module
      1. Converting adc values to  percentage values (%), based on this value to change the brightness of the Pixel LED
 2. Commands to control on/off and color
