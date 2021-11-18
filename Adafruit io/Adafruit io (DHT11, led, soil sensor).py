@@ -203,7 +203,7 @@ print("Connected to Adafruit !!")
 counter = 0
 while True:
     io.loop()
-    if counter >= 5:
+    if counter >= 5: #5 seconds to send data to Adafruit IO
         #send a new message
         temp_reading = dhtDevice.temperature
         print("Publishing value {0} to feed: {1}".format(temp_reading, temp_feed))
