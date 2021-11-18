@@ -33,6 +33,7 @@ Added:
     2. Find the mositure range of the sensor 
 
 ## Neopixel light control with light sensor ##
+It is based on the above TCP server code.
 
 Added:
 
