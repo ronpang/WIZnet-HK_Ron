@@ -22,7 +22,7 @@ Added:
 1. NeoPixel light control 
       1. LED ON/OFF control
       2. Convert RGB signal in Hex formart to change the color of the Pixel LED (Example: #FF0000 = RED)
-3. Light sensor
+3. Light sensor (Diode Type Photosensitive Sensor)
       1. Sensor on/off Switch (ON = Light Sensor ON, OFF = Manual Control from Adafruit IO Dashboard)
       2. Convert ADC to percentage value for changing the brightness of the Pixel LED
 
