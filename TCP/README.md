@@ -37,7 +37,7 @@ It is based on the above TCP server code.
 
 Added:
 
-1. Light sensor module
+1. Light sensor module (Diode type Photosensitive Sensor)
      1. Converting adc values to  percentage values (%), based on this value to change the brightness of the Pixel LED
 2. Commands to control on/off and color
      1. Determine the command (on/off) and do related response
