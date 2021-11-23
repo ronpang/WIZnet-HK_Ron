@@ -159,7 +159,7 @@ while True:
             elif data2 == "off":
                 led_red.value = 0 #turn off
             try:     
-                if counter == 5: #wait for 5 seconds
+                if counter == 50: #wait for 5 seconds
                     counter = 0
                     #Temperature sensor convert from int to string to byte
                     temp_reading = dhtDevice.temperature
