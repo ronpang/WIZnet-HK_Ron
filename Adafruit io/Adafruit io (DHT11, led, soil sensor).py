@@ -14,8 +14,8 @@ from adafruit_io.adafruit_io import IO_MQTT
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
 
 secrets = {
-    'aio_username' : '******',   ### Wirte Username here ###
-    'aio_key' : '*****************'  ### Write Active Key here ###
+    'aio_username' : 'ronpang',   ### Wirte Username here ###
+    'aio_key' : 'aio_cKeu86ndn3vRX6jX3pBIIR74ykrt'  ### Write Active Key here ###
     }
 
 # Set your Adafruit IO Username and Key in secrets.py
@@ -52,7 +52,7 @@ ethernetRst = digitalio.DigitalInOut(W5x00_RSTn)
 ethernetRst.direction = digitalio.Direction.OUTPUT
 
 # Set A0 for receving data from the soil hudmidity module
-soil = analogio.AnalogIn(board.A0)
+#soil = analogio.AnalogIn(board.A0)
 
 # For Adafruit Ethernet FeatherWing
 cs = digitalio.DigitalInOut(SPI0_CSn)
@@ -133,7 +133,7 @@ while dry_counter < 100: #collect 100 samples
     dry_counter= dry_counter + 1
     dry_number = soil.value + dry_number
     time.sleep(0.1)
-    #print ("Dry value counting..." + str(dry_counter))
+    print ("Dry value counting..." + str(dry_counter))
 
 #Average dry value
 dry_average = dry_number / dry_counter
@@ -154,7 +154,7 @@ while wet_counter <100: #collect 100 samples
     wet_counter = wet_counter + 1
     wet_number  = soil.value + wet_number
     time.sleep(0.1)
-    #print ("Wet value counting..." + str(wet_counter))
+    print ("Wet value counting..." + str(wet_counter))
 
 #Average wet value
 wet_average = wet_number / wet_counter
@@ -203,21 +203,31 @@ print("Connected to Adafruit !!")
 counter = 0
 while True:
     io.loop()
-    if counter >= 5: #5 seconds to send data to Adafruit IO
-        #send a new message
-        temp_reading = dhtDevice.temperature
-        print("Publishing value {0} to feed: {1}".format(temp_reading, temp_feed))
-        io.publish(temp_feed, temp_reading)
+    try:
+        if counter >= 5:
+            #send a new message
+            temp_reading = dhtDevice.temperature
+            print("Publishing value {0} to feed: {1}".format(temp_reading, temp_feed))
+            io.publish(temp_feed, temp_reading)
 
-        humid_reading = dhtDevice.humidity
-        print("Publishing value {0} to feed: {1}".format(humid_reading, humid_feed))
-        io.publish(humid_feed, humid_reading)
-    
-        soil_reading = (soil.value - dry_average) / ((wet_average - dry_average)/100)
-        print("Publishing value {0} to feed: {1}".format(soil_reading, soil_feed))
-        io.publish(soil_feed, soil_reading)
-        counter = 0
+            humid_reading = dhtDevice.humidity
+            print("Publishing value {0} to feed: {1}".format(humid_reading, humid_feed))
+            io.publish(humid_feed, humid_reading)
         
-    else:
-        time.sleep(1)
-        counter = counter + 1
+            soil_reading = (soil.value - dry_average) / ((wet_average - dry_average)/100)
+            print("Publishing value {0} to feed: {1}".format(soil_reading, soil_feed))
+            io.publish(soil_feed, soil_reading)
+            counter = 0
+        
+        else:
+            time.sleep(1)
+            counter = counter + 1
+            
+    except RuntimeError as error:
+        # Errors happen fairly often, DHT's are hard to read, just keep going
+        print(error.args[0])
+        time.sleep(2.0)
+        continue
+    except Exception as error:
+        dhtDevice.exit()
+        raise error
