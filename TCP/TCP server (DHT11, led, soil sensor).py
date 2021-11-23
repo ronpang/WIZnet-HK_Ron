@@ -56,7 +56,7 @@ time.sleep(1)
 ethernetRst.value = True
 
 # Initialize ethernet interface with DHCP
-eth = WIZNET5K(spi_bus, cs, is_dhcp=True, mac=MY_MAC, debug=True)
+eth = WIZNET5K(spi_bus, cs, is_dhcp=True, mac=MY_MAC, debug=False)
 
 # Show all information
 print("Chip Version:", eth.chip)
@@ -134,7 +134,7 @@ while True:
     
     
     else:
-        if conn.status in (SNSR_SOCK_FIN_WAIT,):
+        if conn.status in (SNSR_SOCK_FIN_WAIT,): #Socket is closed, you could close your Socket
             conn.close()
             conn = None
             counter = 0
@@ -158,35 +158,42 @@ while True:
                 led_red.value = 1 #turn on
             elif data2 == "off":
                 led_red.value = 0 #turn off
-                
-            if counter == 50:
-                counter = 0
-                #Temperature sensor convert from int to string to byte
-                temp_reading = dhtDevice.temperature
-                temp_tostring ='Temperature: ' + str(temp_reading) + '\r\n'
-                temp_convert = temp_tostring.encode()
+            try:     
+                if counter == 5: #wait for 5 seconds
+                    counter = 0
+                    #Temperature sensor convert from int to string to byte
+                    temp_reading = dhtDevice.temperature
+                    temp_tostring ='Temperature: ' + str(temp_reading) + '\r\n'
+                    temp_convert = temp_tostring.encode()
                        
-                #Humidity sensor convert from int to string to byte
-                humid_reading = dhtDevice.humidity
-                humid_tostring = 'Humid: ' + str(humid_reading) + '\r\n'
-                humid_convert = humid_tostring.encode()
-    
-                #Soil Humidity sensor
-                if soil.value < dry_average or soil.value > wet_average:
-                    soil_humid_tostring = "Error value, please put the sensor to your plant\r\n"
-                    soil_humid_convert = soil_humid_tostring.encode() 
+                    #Humidity sensor convert from int to string to byte
+                    humid_reading = dhtDevice.humidity
+                    humid_tostring = 'Humid: ' + str(humid_reading) + '\r\n'
+                    humid_convert = humid_tostring.encode()
+                    
+                    #Soil Humidity sensor
+                    if soil.value < dry_average or soil.value > wet_average:
+                        soil_humid_tostring = "Error value, please put the sensor to your plant\r\n"
+                        soil_humid_convert = soil_humid_tostring.encode() 
                 
-                else:
-                    percentage_value = (soil.value - dry_average) / ((wet_average - dry_average)/100)
-                    soil_humid_tostring ='Soil: ' + str(percentage_value) + '\r\n'
-                    soil_humid_convert = soil_humid_tostring.encode()               
+                    else:
+                        percentage_value = (soil.value - dry_average) / ((wet_average - dry_average)/100)
+                        soil_humid_tostring ='Soil: ' + str(percentage_value) + '\r\n'
+                        soil_humid_convert = soil_humid_tostring.encode()               
 
                 
-                #send temperature and humidity data
-                conn.send(temp_convert)  
-                conn.send(humid_convert)
-                conn.send(soil_humid_convert)
+                    #send temperature and humidity data
+                    conn.send(temp_convert)  
+                    conn.send(humid_convert)
+                    conn.send(soil_humid_convert)
                 
-                
+            except RuntimeError as error:
+                # Errors happen fairly often, DHT's are hard to read, just keep going
+                print(error.args[0])
+                time.sleep(2.0)
+                continue
+            except Exception as error:
+                dhtDevice.exit()
+                raise error
                 
             
