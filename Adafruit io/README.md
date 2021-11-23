@@ -11,6 +11,9 @@ Added:
 2. LED - Red color LED light contol (on/off only)
 3. Soil Humidity Sensor - Convert ADC to percentage value (%)
 
+Updated:
+1. DHT11 - added runtime error handling 
+
 IO features:
 1. Gauge for Temperature, Humiditiy and Soil Humidity Sensor
 2. LED light on/off control
