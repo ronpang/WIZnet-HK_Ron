@@ -31,9 +31,14 @@ Added:
 
 Updated: ([Version 2][link-adafruit io previous record])
 1. It could save previous light settings from adafruit IO and reactivate settings after reboot
+      
+      **PS:Boot.py is required for Raspberry PI PICO + circuit python ([information][link - boot.py])**
+
+
 
 [link-adafruit_io_wiznet_example]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples/Adafruit_IO
 [link-adafruit_io_wiznet]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Adafruit_IO/Getting%20Start%20Adafruit%20IO.md
 [link- TCP server sensor/control]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(DHT11%2C%20led%2C%20soil%20sensor).py
 [link- TCP Neopixel]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(Neopixel%20light%20control).py
 [link-adafruit io previous record]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Adafruit%20io/Adafruit%20io%20(Neopixel%20light%20control)%20%2B%20previous%20record.py
+[link - boot.py]:https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/data-logger
