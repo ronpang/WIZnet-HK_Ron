@@ -113,13 +113,13 @@ def on_led_color(client, topic, message):
     global light_color
     print("New message on topic {0}: {1}".format(topic, message))
     if message.find("#") == 0:
-        message.split("#", 6)
+        message.split("#", 6) #Seperate all HEX numbers
         hex1 = int(message[1] + message[2],16)
         hex2 = int(message[3] + message[4],16)
         hex3 = int(message[5] + message[6],16)
         pixels.fill((hex1,hex2,hex3))
         pixels.show() #Change color
-        light_color = message
+        light_color = message 
     else:
         print("Unexpected message on LED feed")
 
@@ -223,27 +223,28 @@ global light_color #light color
 #Initialize global variables
 
 light_onoff = 0 #int
-brightness = 0 #int
+brightness = 0 #float
 sensor_onoff = 0 #int
 light_color ='0' #Str
-
+#collect previous record from lighting.txt file
 lightfile = open('lighting.txt', 'r')
 lightdata = lightfile.read()
 print(lightdata)
 lightfile.close()
 
+#collect all previous and locate it back to the related global variables
 if lightdata.find(",") != -1:
     split_data= lightdata.split(",", 3)
-    light_onoff = int(split_data[0])
+    light_onoff = int(split_data[0]) #light on/off
     #determine the light's on/off
     if light_onoff == 0: #light is off
         brightness = 0 #turn off the light 
     else:
         brightness = float(split_data[1]) #use the previous brightness setting
     
-    sensor_onoff = int(split_data[2])
-    light_color = split_data[3]
-    light_color.split("#", 6)
+    sensor_onoff = int(split_data[2]) #sensor on/off
+    light_color = split_data[3] #color 
+    light_color.split("#", 6) #split and but all datab back to related RGB
     Red = int(light_color[1] + light_color[2],16)
     Green = int(light_color[3] + light_color[4],16)
     Blue = int(light_color[5] + light_color[6],16)
@@ -271,6 +272,7 @@ while True:
                 pixels.brightness = brightness # change the light
                 pixels.show() #change the brightness
     
+    #Replace the latest lighting settings from global variables
     lightfile = open('lighting.txt', 'w+')
     lightdata = lightfile.write(str(light_onoff) + ',' + str(brightness) + ',' + str(sensor_onoff) + ',' + light_color)
     lightfile.close()
