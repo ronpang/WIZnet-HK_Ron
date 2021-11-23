@@ -32,6 +32,10 @@ Added:
     1. Converting adc values to percentage values(%) ([Soil moisture sensor coding][link-soil moisture readme])
     2. Find the mositure range of the sensor 
 
+Updated:
+
+1. DHT11 - added runtime error handling
+
 ## Neopixel light control with light sensor ##
 It is based on the above TCP server code.
 
