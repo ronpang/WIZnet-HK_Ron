@@ -32,7 +32,7 @@ Added:
 Updated: ([Version 2][link-adafruit io previous record])
 1. It could save previous light settings from adafruit IO and reactivate settings after reboot
       
-      **PS:Boot.py is required for Raspberry PI PICO + circuit python ([information][link - boot.py])**
+      **PS:Boot.py is required for Raspberry PI PICO + Circuit Python coding ([information][link - boot.py])**
 
 
 
