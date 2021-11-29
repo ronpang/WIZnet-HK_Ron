@@ -3,7 +3,7 @@
 ![][link-connection diagram]
 
 ## Suggested Software ##
-&#10004; [**Hercules**][link-hercules]
+ [**Hercules**][link-hercules]
 ## TCP server ##
 
 This sample code is based on TCP server Echo provided by WIZnet  
