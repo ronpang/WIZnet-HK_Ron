@@ -23,6 +23,10 @@ Added:
 1. DHT11 temperature and humidity sensor
 2. LED light control 
 
+Updated:
+
+1. DHT11 - added runtime error handling
+
 ## DHT11, LED control and Soil moisture sensor ##
 
 Added:
