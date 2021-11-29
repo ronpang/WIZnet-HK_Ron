@@ -59,10 +59,11 @@ Bsed on TCP Server with file features in Raspberry PI PICO
 File settings are required for Circuit Python coding - For more information, please refer adafruit's file settings. ([Information][link - boot.py])
 
 Example feature:
+
 DHT11 - Readings from DHT11 will be record in temp_humid.txt
 
 Added: 
-1. SNTP - real time collected from DNS sever
+1. SNTP - Real time collected from DNS sever and will be record in temp_humid.txt 
 
 
 [link-hercules]: https://www.hw-group.com/software/hercules-setup-utility
