@@ -53,8 +53,19 @@ Added:
      1. Determine the command (on/off) and do related response
      2. Inputting RBG values in interger form (xxx,xxx,xxx) to change the color of the Pixel leds 
 
+## TCP Server with File records ##
+Bsed on TCP Server with file features in Raspberry PI PICO
+
+File settings are required for Circuit Python coding - For more information, please refer adafruit's file settings. ([Information][link - boot.py])
+
+Example feature:
+DHT11 - Readings from DHT11 will be record in temp_humid.txt
+
+Added: 
+1. SNTP - real time collected from DNS sever
 
 
 [link-hercules]: https://www.hw-group.com/software/hercules-setup-utility
 [link-connection diagram]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/github-%20connection%20diagram%202.PNG
 [link-soil moisture readme]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Soil%20Sensor/README.md
+[link - boot.py]:https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/data-logger
