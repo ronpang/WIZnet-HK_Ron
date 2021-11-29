@@ -85,12 +85,12 @@ while True:
     
     
     else:
-        if conn.status in (SNSR_SOCK_FIN_WAIT,):
+        if conn.status in (SNSR_SOCK_FIN_WAIT,):#Disconnected, prepare to close the socket
             conn.close()
             conn = None
             counter = 0
              
-        elif conn.status in (SNSR_SOCK_CLOSE_WAIT,):# Closing stage, close connection
+        elif conn.status in (SNSR_SOCK_CLOSE_WAIT,):# Closing stage, close connection & socket
             conn.disconnect() #close the connection
             conn.close() #close the socket
             conn = None # reset the variable for the next connection
@@ -109,21 +109,30 @@ while True:
                 led_red.value = 1 #turn on
             elif data2 == "close":
                 led_red.value = 0 #turn off
-                
-            if counter ==50:
-                counter = 0
-                #Temperature sensor convert from int to string to byte
-                temp_reading = dhtDevice.temperature
-                temp_tostring = str(temp_reading)
-                temp_convert = temp_tostring.encode()
+            
+            try:     
+                if counter ==50:
+                    counter = 0
+                    #Temperature sensor convert from int to string to byte
+                    temp_reading = dhtDevice.temperature
+                    temp_tostring = str(temp_reading)
+                    temp_convert = temp_tostring.encode()
                        
-                #Humidity sensor convert from int to string to byte
-                humid_reading = dhtDevice.humidity
-                humid_tostring = str(humid_reading)
-                humid_convert = humid_tostring.encode()
+                    #Humidity sensor convert from int to string to byte
+                    humid_reading = dhtDevice.humidity
+                    humid_tostring = str(humid_reading)
+                    humid_convert = humid_tostring.encode()
                 
-                #send temperature and humidity data
-                conn.send(temp_convert)  
-                conn.send(humid_convert) 
+                    #send temperature and humidity data
+                    conn.send(temp_convert)  
+                    conn.send(humid_convert) 
                 
+            except RuntimeError as error:
+                # Errors happen fairly often, DHT's are hard to read, just keep going
+                print(error.args[0])
+                time.sleep(2.0)
+                continue
+            except Exception as error:
+                dhtDevice.exit()
+                raise error  
             
