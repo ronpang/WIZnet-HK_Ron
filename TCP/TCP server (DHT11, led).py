@@ -86,8 +86,8 @@ while True:
     
     else:
         if conn.status in (SNSR_SOCK_FIN_WAIT,):#Disconnected, prepare to close the socket
-            conn.close()
-            conn = None
+            conn.close() #close the socket
+            conn = None # reset the variable for the next connection
             counter = 0
              
         elif conn.status in (SNSR_SOCK_CLOSE_WAIT,):# Closing stage, close connection & socket
