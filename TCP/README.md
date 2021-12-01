@@ -40,6 +40,9 @@ Added:
     1. Manual
     2. Automatic - determine by the percentage values from the soil moist sensor
 
+Updated:
+1. Class function (Soil_range_set) for simplify the function
+
 ## Neopixel light control with light sensor ##
 It is based on the above TCP server code.
 
