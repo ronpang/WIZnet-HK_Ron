@@ -228,9 +228,3 @@ while True:
                 elif conn.status in (SNSR_SOCK_CLOSED,):
                     conn = None
                     delay_counter = 0
-
-            
-
-             
-
-            
