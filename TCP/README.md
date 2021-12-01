@@ -40,10 +40,6 @@ Added:
     1. Manual
     2. Automatic - determine by the percentage values from the soil moist sensor
 
-Updated:
-
-1. DHT11 - added runtime error handling
-
 ## Neopixel light control with light sensor ##
 It is based on the above TCP server code.
 
