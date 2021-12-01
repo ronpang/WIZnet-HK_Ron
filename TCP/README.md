@@ -2,7 +2,7 @@
 
 ![][link-connection diagram]
 
-## Suggested Software ##
+## Suggested TCP terminal Software ##
  [**Hercules**][link-hercules]
 ## TCP server ##
 
@@ -33,10 +33,12 @@ Updated:
 
 Added:
 
-1. DHT11 and LED light control 
-2. Added Soil moisture sensor 
+1. Soil moisture sensor 
     1. Converting adc values to percentage values(%) ([Soil moisture sensor coding][link-soil moisture readme])
     2. Find the mositure range of the sensor 
+2. Relay - controls the valve for water input.
+    1. Manual
+    2. Automatic - determine by the percentage values from the soil moist sensor
 
 Updated:
 
