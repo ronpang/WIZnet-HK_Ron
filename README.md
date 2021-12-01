@@ -25,7 +25,7 @@ WIZnet's TCP's sample codes to create a step by step codings for developing diff
 
 1. [TCP communication][link-tcp communication] - Echo TCP server example with Status register controls from WIZnet's chip. (Based on WIZnet's [TCP Echo][link-tcp echo] example)
 2. [TCP with DHT11 Sensor and light controls][link-DHT11 led] - TCP communication to monitor records from Adding DHT11 and controls a Red LED light blub
-3. [TCP with Soil moisture and relay][link-soil_relay] -Combined everything and use WIZnet's Ehternet HAT for TCP communication
+3. [TCP with Soil moisture and relay][link-soil_relay] - Soil Moisture sensor calculates the moist of the soil and controls the amount of water into the plant
 4. [TCP Pixel light control][link-TCP light control] - Contain a light sensor, using command to control on/off and color change (Based on WIZnet's [Neopixel][link-wiznet neopiexl] example)
 5. [TCP with File][link-TCP file] - Used file feature in Raspberry PI PICO, it includes DHT11 for readings and SNTP for collecting real time information from SNTP server (Based on WIZnet's [SNTP][link-SNTP] example)
 
