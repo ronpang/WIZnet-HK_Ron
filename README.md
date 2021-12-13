@@ -49,7 +49,7 @@ WIZnet's Adafruiit IO samples codes with related application (Ref: [WIZnet's Eth
 [link-soil_relay]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(soil%20sensor%20+%20relay).py
 [link-TCP file]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(DHT11%2C%20led)%20%2B%20file.py
 [link-SNTP]:https://github.com/ronpang/RP2040-HAT-CircuitPython/tree/master/examples/SNTP
-[link-adafruitio1]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Adafruit%20io/Adafruit%20io%20(DHT11%2C%20led%2C%20soil%20sensor).py
+[link-adafruitio1]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Adafruit%20io/Adafruit%20io%20(DHT11%2C%20led%2C%20soil%20sensor%2C%20relay)%20%2B%20previous%20setting.py
 [link-tcp echo]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Network/W5x00_Echo_Demo_TCP.py
 [link-adafruit_io_wiznet_example]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples/Adafruit_IO
 [link-adafruit_io_wiznet]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Adafruit_IO/Getting%20Start%20Adafruit%20IO.md
