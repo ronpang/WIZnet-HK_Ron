@@ -29,7 +29,7 @@ Updated:
 
 1. DHT11 - added runtime error handling
 
-## DHT11, LED control and Soil moisture sensor ##
+## Soil moisture sensor and Relay ##
 
 Added:
 
