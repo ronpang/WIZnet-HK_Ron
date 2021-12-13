@@ -43,7 +43,7 @@ Added:
 Updated:
 1. Class function (Soil_range_set) for simplify the function
 
-## Neopixel light control with light sensor ##
+## Pixel LED light control with light sensor ##
 It is based on the above TCP server code.
 
 Added:
@@ -65,6 +65,9 @@ DHT11 - Readings from DHT11 will be record in temp_humid.txt
 
 Added: 
 1. SNTP - Real time collected from DNS sever and will be record in temp_humid.txt 
+
+# Reference
+Adafruit Neopixel link: https://github.com/adafruit/Adafruit_NeoPixel
 
 
 [link-hercules]: https://www.hw-group.com/software/hercules-setup-utility
