@@ -66,7 +66,7 @@ DHT11 - Readings from DHT11 will be record in temp_humid.txt
 Added: 
 1. SNTP - Real time collected from DNS sever and will be record in temp_humid.txt 
 
-# Reference
+## Reference
 Adafruit Neopixel link: https://github.com/adafruit/Adafruit_NeoPixel
 
 
