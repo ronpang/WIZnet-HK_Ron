@@ -41,6 +41,9 @@ WIZnet's Adafruiit IO samples codes with related application (Ref: [WIZnet's Eth
 # 📓 Others
 1. [Soil moisture sensor module][link-soil moisture] - Codings for Soil moisture sensor's range setting and collect moisture
 
+# 📚 Reference
+Adafruit Neopixel link: https://github.com/adafruit/Adafruit_NeoPixel
+
 [link-getting_started]: https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/Ethernet%20Example%20Getting%20Started%20%5BCircuitpython%5D.md
 [link-all examples]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples
 [link-tcp communication]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server.py
