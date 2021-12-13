@@ -8,15 +8,21 @@ It is based on [Adafruit IO example][link-adafruit_io_wiznet_example] & [TCP ser
 
 Added:
 1. DHT11 - Temperature and humidity sensor
-2. LED - Red color LED light contol (on/off only)
-3. Soil Humidity Sensor - Convert ADC to percentage value (%)
+2. Soil Humidity Sensor - Convert ADC to percentage value (%)
+3. Relay - Manually Control ON/OFF
 
 Updated:
 1. DHT11 - added runtime error handling 
+2. Removed LED switch and converted to Relay switch
+3. It could save previous Soil Moisture sensor settings and reactivate settings after reboot
+      
+      **PS.1:Boot.py is required for Raspberry PI PICO + Circuit Python coding ([information][link - boot.py])**
+      
+      **PS.2:The Text file is inside Raspberry PI PICO's flash**
 
 IO features:
 1. Gauge for Temperature, Humiditiy and Soil Humidity Sensor
-2. LED light on/off control
+2. Relay switch on/off control
 
 ## Part 2: NeoPixel light control
 It is based on [Adafruit IO example][link-adafruit_io_wiznet_example] & [TCP NeoPixel light example][link- TCP Neopixel]
