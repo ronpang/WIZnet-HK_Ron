@@ -34,7 +34,7 @@ WIZnet's TCP's sample codes to create a step by step codings for developing diff
 # 🗺️ Adafruit IO Upgrade
 WIZnet's Adafruiit IO samples codes with related application (Ref: [WIZnet's Ethernet HAT Adafruit IO][link-adafruit_io_wiznet] & [WIZnet's Adafruit IO][link-adafruit_io_wiznet_example] example)
 
-1. [Adafruit IO Part 1][link-adafruitio1] - Contain DHT 11, Light controls and Soil Moisture sensor data upload and download 
+1. [Adafruit IO Part 1][link-adafruitio1] - Contain DHT 11, Relay control and Soil Moisture sensor data
 2. [Adafruit IO Part 2][link-adafruitio2] - Contain Light Sensor module to determine brightness and a Pixel Led light 
 
 <a name="Others"></a>
