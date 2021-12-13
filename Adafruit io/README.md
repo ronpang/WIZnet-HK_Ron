@@ -42,6 +42,8 @@ Updated: ([Version 2][link-adafruit io previous record])
       
       **PS.2:The Text file is inside Raspberry PI PICO's flash**
 
+## Reference:
+Adafruit Neopixel link: https://github.com/adafruit/Adafruit_NeoPixel
 
 [link-adafruit_io_wiznet_example]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples/Adafruit_IO
 [link-adafruit_io_wiznet]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Adafruit_IO/Getting%20Start%20Adafruit%20IO.md
