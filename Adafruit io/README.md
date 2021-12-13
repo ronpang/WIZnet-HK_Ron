@@ -24,11 +24,11 @@ IO features:
 1. Gauge for Temperature, Humiditiy and Soil Humidity Sensor
 2. Relay switch on/off control
 
-## Part 2: NeoPixel light control
-It is based on [Adafruit IO example][link-adafruit_io_wiznet_example] & [TCP NeoPixel light example][link- TCP Neopixel]
+## Part 2: Pixel LED light control
+It is based on [Adafruit IO example][link-adafruit_io_wiznet_example] & [TCP Pixel LED light example][link- TCP pixel]
 
 Added:
-1. NeoPixel light control 
+1. Pixel LED light control 
       1. LED ON/OFF control
       2. Convert RGB signal in Hex formart to change the color of the Pixel LED (Example: #FF0000 = RED)
 2. Light sensor (Diode Type Photosensitive Sensor)
@@ -46,6 +46,6 @@ Updated: ([Version 2][link-adafruit io previous record])
 [link-adafruit_io_wiznet_example]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples/Adafruit_IO
 [link-adafruit_io_wiznet]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Adafruit_IO/Getting%20Start%20Adafruit%20IO.md
 [link- TCP server sensor/control]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(DHT11%2C%20led%2C%20soil%20sensor).py
-[link- TCP Neopixel]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(Neopixel%20light%20control).py
+[link- TCP pixel]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(Neopixel%20light%20control).py
 [link-adafruit io previous record]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Adafruit%20io/Adafruit%20io%20(Neopixel%20light%20control)%20%2B%20previous%20record.py
 [link - boot.py]:https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/data-logger
