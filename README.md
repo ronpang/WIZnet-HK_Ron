@@ -26,7 +26,7 @@ WIZnet's TCP's sample codes to create a step by step codings for developing diff
 1. [TCP communication][link-tcp communication] - Echo TCP server example with Status register controls from WIZnet's chip. (Based on WIZnet's [TCP Echo][link-tcp echo] example)
 2. [TCP with DHT11 Sensor and light controls][link-DHT11 led] - TCP communication to monitor records from Adding DHT11 and controls a Red LED light blub
 3. [TCP with Soil moisture and relay][link-soil_relay] - Soil Moisture sensor calculates the moist of the soil and controls the amount of water into the plant
-4. [TCP Pixel light control][link-TCP light control] - Contain a light sensor, using command to control on/off and color change (Based on WIZnet's [Neopixel][link-wiznet neopiexl] example)
+4. [TCP Pixel light control][link-TCP light control] - Contain a light sensor, using command to control on/off and color change (Based on WIZnet's [Neopixel-compatiable][link-wiznet piexl] example)
 5. [TCP with File][link-TCP file] - Used file feature in Raspberry PI PICO, it includes DHT11 for readings and SNTP for collecting real time information from SNTP server (Based on WIZnet's [SNTP][link-SNTP] example)
 
 <a name="AdafruitIO"></a>
@@ -54,5 +54,5 @@ WIZnet's Adafruiit IO samples codes with related application (Ref: [WIZnet's Eth
 [link-adafruit_io_wiznet_example]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/tree/master/examples/Adafruit_IO
 [link-adafruit_io_wiznet]:https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Adafruit_IO/Getting%20Start%20Adafruit%20IO.md
 [link-TCP light control]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20server%20(Neopixel%20light%20control).py
-[link-wiznet neopiexl]: https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Neopixel/W5x00_Neopixel.py
+[link-wiznet piexl]: https://github.com/Wiznet/RP2040-HAT-CircuitPython/blob/master/examples/Neopixel/W5x00_Neopixel.py
 [link-adafruitio2]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Adafruit%20io/Adafruit%20io%20(Neopixel%20light%20control).py
