@@ -58,7 +58,7 @@ socket.set_interface(eth)
 client = socket.socket()  # Set and name the socket to be a TCP server
 client_ip = "10.0.1.74"  #Set the TCP client IP address. As in this case, it does not required
 client_port = 50007  # Port number to listen on
-client.connect((client_ip, client_port), None)
+client.connect((client_ip, client_port), None) #Try to connect to the TCP server
 
 while True:
 # Maintain DHCP lease (continue the DHCP setting while TCP is connected)
