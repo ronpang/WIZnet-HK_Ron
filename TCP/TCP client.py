@@ -67,8 +67,6 @@ while True:
     led.value = not led.value #showing the light is blinking
     time.sleep(0.1) #transmit data speed
     
-
-    print (client.status)
     if client.status == SNSR_SOCK_ESTABLISHED:
         data = client.recv() # Data size that you could receive
         client.send(data)  # Echo message back to client
