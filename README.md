@@ -7,6 +7,8 @@
 
 4. [Others](#Others)
 
+5. [IOT Platform](#IOT)
+
 <a name="introduction"></a>
 
 # 🔴Introduction
@@ -41,6 +43,10 @@ WIZnet's Adafruiit IO samples codes with related application (Ref: [WIZnet's Eth
 <a name="Others"></a>
 # 📓 Others
 1. [Soil moisture sensor module][link-soil moisture] - Codings for Soil moisture sensor's range setting and collect moisture
+
+<a name="IOT"></a>
+# 📈 IOT Platform
+1. BigIOT.net (Chinese IOT platform) - This platform used Simple TCP connection with Json format command to communicate with IOT platform
 
 # 📚 Reference
 Adafruit Neopixel link: https://github.com/adafruit/Adafruit_NeoPixel
