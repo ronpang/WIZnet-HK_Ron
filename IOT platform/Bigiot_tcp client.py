@@ -46,16 +46,16 @@ time.sleep(1)
 ethernetRst.value = True
 
 class bigiot:
-    confirmed = 0
-    temp_value = 0
-    checkout_time = 10
-    def checking (self,datain):
+    confirmed = 0 #flag variable to control the data to send out
+    temp_value = 0 #Testing variables 
+    checkout_time = 10 # the number of data that could send out to the IOT platform
+    def checking (self,datain): #function to check the connecting status
         checked = None
         
         if datain.find('"M":') == 1:
             found = datain.split('"M":')
-            if found[1].find('"WELCOME') == 0:
-                checked = '{"M":"checkin","ID":"24889","K":"a5ecb8842"}\n'
+            if found[1].find('"WELCOME') == 0: #check is it connected to the platform
+                checked = '{"M":"checkin","ID":"AAAAA","K":"XXXXXX"}\n' #login to the platform
                 
             elif found[1].find('"checkinok"') == 0:
                 self.confirmed = 1
@@ -64,18 +64,18 @@ class bigiot:
                 checked = '{"M":"beat"}\n'
         return checked
     
-    def transmit (self):
+    def transmit (self): #function for transmitting the data
         temp = None
         if self.confirmed == 1:
             self.temp_value += 1
-            temp = '{"M":"u","ID":"24889","V":{"22257":"'+str(self.temp_value)+'"}}\n' 
+            temp = '{"M":"u","ID":"AAAAAA","V":{"BBBBB":"'+str(self.temp_value)+'"}}\n' #format to send data
             time.sleep(5)
         return temp
     
     def checkout (self,waited):
         if  waited == self.checkout_time:
-            logout = '{"M":"checkout","ID":"24889","K":"a5ecb8842"}\n'
-            print('Disconnected')
+            logout = '{"M":"checkout","ID":"AAAAAA","K":"XXXXXX"}\n' #logout from the platform
+            print('Disconnected') #Server will disconnect with us
             return logout
 
 # Initialize ethernet interface with DHCP
