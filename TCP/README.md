@@ -15,7 +15,13 @@ Device:
 
 Modified: 
 
-* Status register checking to handle different kind of communication stage  
+* Status register checking to handle different kind of communication stage 
+
+## TCP client ##
+
+This sample code will continously to connect to a TCP server.
+- TCP server socket needs to be "ON" and the IP address and Port Number needs to input correctly into the program
+- If it cannot connect for a period of time, it will show error message
 
 ## DHT11 and LED control ##
 
