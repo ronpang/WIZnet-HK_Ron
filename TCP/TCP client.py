@@ -56,7 +56,7 @@ print("My IP address is:", eth.pretty_ip(eth.ip_address))
 # Initialize steps for WIZnet's socket to create TCP server
 socket.set_interface(eth)
 client = socket.socket()  # Set and name the socket to be a TCP server
-client_ip = "10.0.1.74"  #Set the TCP Server IP address. As in this case, it does not required
+client_ip = "10.0.1.74"  #Set the TCP client IP address. As in this case, it does not required
 client_port = 50007  # Port number to listen on
 client.connect((client_ip, client_port), None)
 
@@ -67,12 +67,12 @@ while True:
     led.value = not led.value #showing the light is blinking
     time.sleep(0.1) #transmit data speed
     
-    if client.status == SNSR_SOCK_ESTABLISHED:
+    if client.status == SNSR_SOCK_ESTABLISHED: #when it is connected
         data = client.recv() # Data size that you could receive
         client.send(data)  # Echo message back to client
         print(data) #print out the data that you sent
-    elif client.status == SNSR_SOCK_CLOSE_WAIT:
+    elif client.status == SNSR_SOCK_CLOSE_WAIT: #when it found out it is disconnected
         client.disconnect() #close the connection
     elif client.status == SNSR_SOCK_CLOSED:
-        client.connect((client_ip, client_port), None)
+        client.connect((client_ip, client_port), None) #reconnect
 
