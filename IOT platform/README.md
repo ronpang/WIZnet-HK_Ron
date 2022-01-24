@@ -13,7 +13,7 @@ This section provides template reference source code for each platforms
 <a name="Bigiot"></a>
 ## BigIOT net (Simple)
 This IOT platform is one of the Chinese IOT platform. It used the TCP communication to transmit command directly to the IOT platform.
-
+- Code: [Bigiot reference code][link-bigiot_code]
 1. How to create a account?
    - Go to [bigiot.net][link-bigiot] and select register on the top right corner
    ![][link-register]
@@ -69,3 +69,4 @@ This IOT platform is one of the Chinese IOT platform. It used the TCP communicat
 [link-result]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20testing%20result.PNG
 [link-interface]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20interface%20information%202.PNG
 [link-device]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20device%20information.PNG
+[link-bigiot_code]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/Bigiot_tcp%20client.py
