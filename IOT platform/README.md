@@ -22,7 +22,7 @@ This IOT platform is one of the Chinese IOT platform. It used the TCP communicat
 3. How to create a device?
    - Login to your account
    - Go to Device -> list -> add new device (please refer the image below)
-   ![][link-device]
+   ![][link-device1]
    
    ![][link-device2]
    - input the device name -> press confirm (please refer the image bwlow)
@@ -41,16 +41,25 @@ This IOT platform is one of the Chinese IOT platform. It used the TCP communicat
    ![][link-communication]
 6. How to send commands?
    - Command format:
-        - Device Login: {"M":"checkin","ID":"xx1","K":"xx2"}\n
-        - Send data: {"M":"update","ID":"xx1","V":{"id1":"value1",...}}\n
-        - Device Logout: {"M":"checkout","ID":"xx1","K":"xx2"}\n
+    ```python
+        - Device Login: {"M":"checkin","ID":"AAAAAA","K":"XXXXXX"}\n
+        - Send Data: {"M":"update","ID":"AAAAAA","V":{"BBBBBB":"CCCCCC"}}\n
+        - Device Logout: {"M":"checkout","ID":"AAAAAA","K":"XXXXXX"}\n
+        #AAAAAA = ID of the device
+        #BBBBBB = ID of the interface
+        #XXXXXX = Apikey
+        #CCCCCC = value for first interface
+    ```
+    Information:
+    ![][link-device]
+    ![][link-interface]
 7. Result: 
    Testing method: add 1 to Bigiot.net
    ![][link-result]
    
    
 [link-bigiot]: https://www.bigiot.net/
-[link-device]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20device%201.PNG
+[link-device1]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20device%201.PNG
 [link-device2]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20Device%202.PNG
 [link-device3]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20Device%203.PNG
 [link-interface1]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20interface%201.PNG
@@ -58,3 +67,5 @@ This IOT platform is one of the Chinese IOT platform. It used the TCP communicat
 [link-communication]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/Bigiot%20Communication%20diagram.PNG
 [link-register]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/big%20iot%20register.PNG
 [link-result]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20testing%20result.PNG
+[link-interface]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20interface%20information%202.PNG
+[link-device]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20device%20information.PNG
