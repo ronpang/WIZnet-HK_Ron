@@ -24,7 +24,7 @@ This IOT platform is one of the Chinese IOT platform. It used the TCP communicat
    - Select the unit output (optional)
 5. How to communicate?
    - DNS IP address: www.bigiot.net (you could directly input into 
-   - Port Number: 8181 . 8282 (include heartbeat package - 40S) , 8383 (SSL)
+   - Port Number: 8181 . 8282 (include heartbeat package - 40S) , 8383 (SSL, heartbeat package - 30S)
    - If there isn't any data transmittion, it will auto disconnected for Port 8181
    - Communication diagram
 6. How to send commands?
