@@ -16,8 +16,12 @@ This IOT platform is one of the Chinese IOT platform. It used the TCP communicat
    - Email confirmation
 3. How to create a device?
    - Login to your account
-   - Go to subnet -> list -> add new device (please refer the image below)
+   - Go to Device -> list -> add new device (please refer the image below)
+   ![][link-device]
+   
+   ![][link-device2]
    - input the device name -> press confirm (please refer the image bwlow)
+   ![][link-device3]
 4. How to create a interface?
    - Go to interface -> add
    - Input the interface name -> choose the related device -> select the related input 
@@ -35,3 +39,7 @@ This IOT platform is one of the Chinese IOT platform. It used the TCP communicat
 7. Result:
 
 [link-bigiot]: https://www.bigiot.net/
+[link-device]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20device%201.PNG
+[link-device2]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20Device%202.PNG
+[link-device3]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/bigiot%20Device%203.PNG
+
