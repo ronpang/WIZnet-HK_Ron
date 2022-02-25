@@ -1,12 +1,3 @@
-# IOT platform
-All IOT platforms are required to use different kind of network application protocol to ensure the data could be safe to delivery.
-
-Normally, it would use the following methods to create 
-1. MQTT protocol 
-2. HTML protocol 
-
-This section provides template reference source code for each platforms
-
 ## BigIOT net (Basic)
 This IOT platform is one of the Chinese IOT platform. It used the TCP communication to transmit command directly to the IOT platform.
 - Code: [Bigiot reference code][link-bigiot_code]
