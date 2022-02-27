@@ -19,7 +19,8 @@ Used Adafruit circuit library:
 
 Communication method on Onenet:
 1. login to onenet
-  1. create a correct login password
+    1. Where to find the important login information
+    2. create a correct login password
 2. using property names to send data to the platform and receive confirmation message from the platform
 3. using property names to receive data from the platform and send feedback to the server for confirmation
 
@@ -35,6 +36,12 @@ For login to Onenet, it is required the following information.
 **Password**: Login password
 
 **Client ID**: device name
+
+## Where to find the important login information
+1. Go to onenet website and login ([onenet webiste][link-onenetwebsite])
+2. Go to Service products and choose "OneNET Studio"
+
+
 
 ## How to generate a correct login password
 For the login password of onenet, it combines with different information with a specific key provided by the site. 
@@ -61,7 +68,7 @@ Token = CCCCCCCCC
 ### How to make the Signature
 The whole process required HMAC with the encrypyion method that you had used above (Sha1, sha256 or MD5)
 
-THe message to encryption: et + \n + method + \n + res + \n + version
+The message to encryption (in 1 string): et + \n + method + \n + res + \n + version
 
 Key for encryption: Token = CCCCCCCCC
 
@@ -75,11 +82,11 @@ Steps:
 4. base64 encode the emcrypted message and it used as Signature
 
 ### Combine all the information into a password
-Formula:
+**Formula:** version=**version**&res=**Resource**&et=**Expiration Time**&method=**Method**&sign=**Signature**
 
-version=**version**&res=**Resource**&et=**Expiration Time**&method=**Method**&sign=**Signature**
+**Example:**  version=2018-10-31&res=products/AAAAAAAA/device/BBBBBBBBB&et=1645884887&method=md5&sign=DDDDDDDD
 
-Please know that the & symbol are used to seperate each variables and information
+***Please know that the '&' symbol are used to seperate each variables and information***
 
 About the Signuature, the symbols required to converted into URL format like the following
 
@@ -92,4 +99,5 @@ About the Signuature, the symbols required to converted into URL format like the
 [link-mqtt]: https://github.com/ronpang/RP2040-HAT-CircuitPython/tree/master/examples/MQTT
 [link-hashlib]: https://github.com/adafruit/Adafruit_CircuitPython_hashlib
 [link-hmac]: https://github.com/jimbobbennett/CircuitPython_HMAC
+[link-onenetwebsite]: https://open.iot.10086.cn/
 [link-password]: https://open.iot.10086.cn/doc/v5/develop/detail/624
