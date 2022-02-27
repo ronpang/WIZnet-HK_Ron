@@ -21,8 +21,8 @@ Communication method on Onenet:
 1. login to onenet
     1. Where to find the important login information
     2. create a correct login password
-2. using property names to send data to the platform and receive confirmation message from the platform
-3. using property names to receive data from the platform and send feedback to the server for confirmation
+2. Transmit data to the platform
+3. Receive data from the platform
 
 # Login to onenet
 For login to Onenet, it is required the following information.
@@ -40,6 +40,11 @@ For login to Onenet, it is required the following information.
 ## Where to find the important login information
 1. Go to onenet website and login ([onenet webiste][link-onenetwebsite])
 2. Go to Service products and choose "OneNET Studio"
+![][link-onenetstudio]
+4. Go to device management -> device manage -> Press details
+![][link-devicepage]
+6. Collect all the information from this page. 
+![][link-device_details]
 
 
 
@@ -94,10 +99,83 @@ About the Signuature, the symbols required to converted into URL format like the
 2. **/** => %2F
 3. **=** => %3D
 
+# Transmit data to the platform
+Official Example: [onenet mqtt best example][link-mqttexample]
+
+Required subscribe:
+1. Channel for tramsmit the data to the platform
+    1. **$sys/AAAAAAAAA/BBBBBBBB/thing/property/post**
+2. Channel for receving the reply message from the platform
+    1. **$sys/AAAAAAAAA/BBBBBBBB/thing/property/post/reply**
+
+Progress:
+1. Subscribe the reply message channel to make sure the data has transmitted to the platform
+2. Subscribe the transmit data channel
+3. Using the following Onejson format to send the data to the platform
+
+**Example:** {"id": "123","version": "1.0","params": {"Power": {"value": "500","time": 1645945740032},"temp": {"value": 20,"time": 1645945740032}}}
+
+|No.|Variable name|Type|Description|
+| ------------- | ------------- | ------------- | ------------- |
+|1| ID| String|A variable to defind this message, you could define it by yourself. Max: 13 byte|
+|2| Version| String| Fixed variables: 1.0|
+|3| Params | JsonObject| Fixed format in json. The data that you wanted to upload to the platform based on the variable that you created on the platform|
+|4| Time | Long | Epoch time in milliseconds. If you required to upload different data from differnt devices together, please provide a delay to each device to allow the platfrom receive the data correctly.|
+|5| Value| string| The value that you wanted to upload to the specific variables. Example: Power = 500 value, Temp = 20
+
+4. Based on the above method, it will receive a feedback from the platform like the following
+
+**Example:** {"id":"123","code":200,"msg":"success"}
+
+It will reply based on your ID with a code is "200" (well received from the server) and a message showed success from the server.
+
+# Receive data from the platform
+Official Example: [onenet mqtt best example][link-mqttexample]
+
+Required subscribe:
+1. Channel for tramsmit a reply message to the platform
+    1. **$sys/AAAAAAAAA/BBBBBBBB/thing/property/set_reply**
+2. Channel for receving data from the platform
+    1. **$sys/AAAAAAAAA/BBBBBBBB/thing/property/set**
+
+Progress:
+1. Subscribe the receiving data channel to make sure the data has transmitted to the platform
+2. Subscribe the reply message data channel to complete the data communication progress
+3. Data received from the platform
+4. Using the following Onejson format to send the reply message to the platform
+
+Testing procedure:
+1. Go to remote monitoring -> device test
+2. Choose the product and device that related to your PICO
+3. Choose application simulator
+4. Choose the variables that you wanted to send to the device and press send
+5. Received data from the server
+    1. Received data : {"id":"1","version":"1.0","params":{"Power":"123","temp":20}}
+
+7. Return reply message to conplete the conversation
+    1. Reply message: {"id":"1","code":200,"msg":"success"}
+
+|No.|Variable name|Type|Description|
+| ------------- | ------------- | ------------- | ------------- |
+|1| ID| String|Created by the platform: Normally, it is a asscending number start from 1|
+|2| Code| String| Replied in 200. It means the devices has well received data from the platform|
+|3| Message (msg) | string| Feedback message. it cant be any data|
+
+
+### Testing procedure and result from the platform 
+![][link-testing_procedure]
+
+
+
 
 [link-ntp]: https://github.com/ronpang/RP2040-HAT-CircuitPython/tree/master/examples/SNTP
 [link-mqtt]: https://github.com/ronpang/RP2040-HAT-CircuitPython/tree/master/examples/MQTT
 [link-hashlib]: https://github.com/adafruit/Adafruit_CircuitPython_hashlib
 [link-hmac]: https://github.com/jimbobbennett/CircuitPython_HMAC
 [link-onenetwebsite]: https://open.iot.10086.cn/
+[link-onenetstudio]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/onenet%20-%20choose%20onenet%20studio.PNG
+[link-devicepage]:https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/onnet%20device.PNG
+[link-device_details]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/onenet%20-detail%20information.PNG
 [link-password]: https://open.iot.10086.cn/doc/v5/develop/detail/624
+[link-mqttexample]:https://open.iot.10086.cn/doc/v5/develop/detail/641
+[link-testing_procedure]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/img/onenet%20testing.PNG
