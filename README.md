@@ -47,6 +47,7 @@ WIZnet's Adafruiit IO samples codes with related application (Ref: [WIZnet's Eth
 <a name="IOT"></a>
 # 📈 IOT Platform
 1. [BigIOT.net][link-bigiot] (Chinese IOT platform) - This platform used Simple TCP connection with Json format command to communicate with IOT platform
+2. [Onenet IOT][link-onenet] (One of the largest IOT platform) - Used MQTT protocol to connect to the platform (login information required to encrypted)
 
 # 📚 Reference
 Adafruit Neopixel link: https://github.com/adafruit/Adafruit_NeoPixel
@@ -68,3 +69,4 @@ Adafruit Neopixel link: https://github.com/adafruit/Adafruit_NeoPixel
 [link-adafruitio2]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Adafruit%20io/Adafruit%20io%20(Neopixel%20light%20control).py
 [link-tcp client]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20client.py
 [link-bigiot]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/Bigiot_tcp%20client.py
+[link-onenet]: https://github.com/ronpang/WIZnet-HK_Ron/tree/main/IOT%20platform/onenet
