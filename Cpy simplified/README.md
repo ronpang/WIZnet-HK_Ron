@@ -25,7 +25,7 @@ import adafruit_wiznet5k.adafruit_wiznet5k_socket as socket #open socket from WI
       - Function: Create a workable network module that has it's IP address
 2. Network - SPI setup: Setup the SPI interface by using Busio
     - Variables: None
-    - Function: Setup SPI interface, soft reset WIZnet chip for working normally (WIZnet chips required)
+    - Function: Set the GPIOs to Setup SPI interface, soft reset WIZnet chip for working normally (WIZnet chips required)
 3. Network - connection: Create a socket for specific feature for connecting other device
     - Current function: TCP Server or TCP client mode ONLY
     - Variables:
