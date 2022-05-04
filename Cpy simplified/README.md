@@ -3,6 +3,8 @@ Due to the codes for creating a simple TCP connection required a lot of codings,
 
 The codes does is in .py file rather than .mpy file. You could change the codes as you want. 
 
+Current Features: TCP mode only (Server + Client)
+
 # Required libraries:
 ```python
 import board
