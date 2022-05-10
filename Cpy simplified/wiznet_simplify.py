@@ -1,19 +1,7 @@
 # SPDX-FileCopyrightText: 2010 WIZnet
 #
 # SPDX-License-Identifier: MIT
-"""
-`wiznet.simplify.py`
-================================================================================
-Pure-Python interface based on WIZnet's library codes in circuitpython coding.
-* Author(s): Ron Pang
-Implementation Notes
---------------------
-**Software and Dependencies:**
-* Adafruit CircuitPython firmware for the supported boards:
-  https://github.com/adafruit/circuitpython/releases
-* Adafruit's Bus Device library: https://github.com/adafruit/Adafruit_CircuitPython_BusDevice
-* WIZnet library: https://github.com/Wiznet/RP2040-HAT-CircuitPython
-"""
+
 import board
 import digitalio
 import time
