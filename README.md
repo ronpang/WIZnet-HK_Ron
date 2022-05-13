@@ -43,7 +43,7 @@ WIZnet's Adafruiit IO samples codes with related application (Ref: [WIZnet's Eth
 <a name="Others"></a>
 # 📓 Others
 1. [Soil moisture sensor module][link-soil moisture] - Codings for Soil moisture sensor's range setting and collect moisture
-
+2. [Circuitpyhton simpilify][link-cpy] - Function to simplified the coding into few lines.
 <a name="IOT"></a>
 # 📈 IOT Platform
 1. [BigIOT.net][link-bigiot] (Chinese IOT platform) - This platform used Simple TCP connection with Json format command to communicate with IOT platform
@@ -70,3 +70,4 @@ Adafruit Neopixel link: https://github.com/adafruit/Adafruit_NeoPixel
 [link-tcp client]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/TCP/TCP%20client.py
 [link-bigiot]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/IOT%20platform/Bigiot_tcp%20client.py
 [link-onenet]: https://github.com/ronpang/WIZnet-HK_Ron/tree/main/IOT%20platform/onenet
+[link-cpy]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/Cpy%20simplified/wiznet_simplify.py
