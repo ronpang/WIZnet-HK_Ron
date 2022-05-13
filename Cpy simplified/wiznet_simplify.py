@@ -98,6 +98,8 @@ class network:
     def check_mode(self):
         """Check the TCP mode and connect with the remote device"""
         self.eth.maintain_dhcp_lease()
+        if self.communicate.status == SNSR_SOCK_CLOSED:
+            time.sleep(0.5)
         if self.mo is None:
             if self.communicate.status == SNSR_SOCK_LISTEN: #TCP server status: WIZnet's chip is listening for a client device's request
                 self.mo, addr = self.communicate.accept()
