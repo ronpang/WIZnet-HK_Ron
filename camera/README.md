@@ -3,6 +3,10 @@ It used Python coding and circuitpython coding to create connection between a PC
 
 The coding includes a display to show the capturing result from the OV2640.
 
+Coding that I used from other sources:
+1. [Adafruit OV2640][link-ov2640]
+2. [Raspberry Pi Pico - OV2640][link-pico_ov2640]
+
 # Hardware Connection diagram
 Te PICO board required to use GPIO16 - GPIO21. Thus, the connection for the OV2640 will be used most of the pin from GPIO 0 - GPIO 15.
 
@@ -43,3 +47,5 @@ The coding is simple. PC codings will save it as a jpeg file, it used opencv's i
 [link-PICO]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/camera/ov2640%20pico%20tcp%20test.py
 [link-display result]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/camera/camera%20display%20result.PNG
 [link-jpeg]: https://github.com/ronpang/WIZnet-HK_Ron/blob/main/camera/Testing.jpg
+[link-ov2640]: https://github.com/adafruit/Adafruit_CircuitPython_OV2640
+[link-pico_ov2640]: https://learn.adafruit.com/capturing-camera-images-with-circuitpython/raspberry-pi-pico-wiring
