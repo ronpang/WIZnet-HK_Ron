@@ -10,7 +10,7 @@ Coding that I used from other sources:
 # Hardware Connection diagram
 The PICO board required to use GPIO16 - GPIO21. Thus, the connection for the OV2640 will be used most of the pin from GPIO 0 - GPIO 15.
 
-GPIO 14 and GPIO 15 required to add 10K Ohm resistor for pull ups to activate I2C connection
+### GPIO 14 and GPIO 15 required to add 10K Ohm resistor for pull ups to activate I2C connection
 
 For more information, please refer to the image below.
 
