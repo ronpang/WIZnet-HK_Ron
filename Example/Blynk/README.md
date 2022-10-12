@@ -18,6 +18,9 @@ Blynk provided a good instruction on how to create a account and quickstart setu
 ### Step 2: Add the libraries to your lib section
 It is required to add libraries to the folder lib to allow the codes could run.
 
+1. adafruit_bus_device folder
+2. adafruit_wiznet5k folder
+
 It must included wiznet5k libraries. (For more info, please refer to [WIZnet circuitpyhton code][link-cpy])
 
 ![link-lib_image]
